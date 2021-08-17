@@ -1,8 +1,9 @@
-const { pdfmakeReportPdf, pdfmakeTestPdf } = require('./src/pdfmake');
+const { pdfmakeEnhancedInvoicePdf, pdfmakeIHIOUInvoicePdf, pdfmakeTestPdf } = require('./src/pdfmake');
 const { pdfkitTestPdf } = require('./src/pdfkit');
 
 try {
-  pdfmakeReportPdf();
+  pdfmakeIHIOUInvoicePdf();
+  // pdfmakeEnhancedInvoicePdf();
   // pdfkitTestPdf();
 } catch (error) {
   console.log(error);
