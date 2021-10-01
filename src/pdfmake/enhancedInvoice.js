@@ -59,7 +59,7 @@ pdfMaker.tableLayouts = {
       return (rowIndex === 0) ? '#b4e9f0' : 'white'
     }
   },
-  nestedTableLayout: {
+  nestedTableLayout_Enhanced: {
     hLineWidth: function (i, node) {
       return (i === 0 || i === node.table.body.length) ? 0 : 2;
     },
@@ -140,6 +140,36 @@ const docDefinition = {
             { text: '\nRate', alignment: 'center'},
             { text: '\nSETSS', alignment: 'center'},
           ]
+        },
+      ]
+    },
+
+    // DATE OF DOCUMENT
+    {
+      alignment: 'center',
+      columns: [
+        {
+          width: '*',
+          text: ''
+        },
+        {
+          width: 'auto',
+          // width: 100,
+          noWrap: true,
+          text: 'Month:',
+        },
+        {
+          width: 50,
+          text: 'April'
+        },
+        {
+          width: 'auto',
+          noWrap: true,
+          text: 'Year:',
+        },
+        {
+          width: 50,
+          text: '2021',
         },
       ]
     },
@@ -493,7 +523,7 @@ const docDefinition = {
                   [{text: '04-06-2021', style: ['center', 'whiteCell']}, {text: '90', style: ['center', 'whiteCell']}, {text: '05:30 PM', style: ['center', 'whiteCell']}, {text: '07:00 PM', style: 'center'}],
                 ]
               },
-              layout: pdfMaker.tableLayouts.nestedTableLayout,
+              layout: pdfMaker.tableLayouts.nestedTableLayout_Enhanced,
               style: 'cellNestedTable'
             },
             { 
@@ -505,7 +535,7 @@ const docDefinition = {
                   [{text: '04-06-2021', style: ['center', 'whiteCell']}, {text: '90', style: ['center', 'whiteCell']}, {text: '05:30 PM', style: ['center', 'whiteCell']}, {text: '07:00 PM', style: 'center'}],
                 ]
               },
-              layout: pdfMaker.tableLayouts.nestedTableLayout,
+              layout: pdfMaker.tableLayouts.nestedTableLayout_Enhanced,
               style: 'cellNestedTable'
             }
           ]
@@ -679,32 +709,32 @@ const docDefinition = {
       canvas: [
         {
           type: 'line',
-          x1: 115, y1: 128,
-          x2: 290, y2: 128,
+          x1: 115, y1: 144,
+          x2: 290, y2: 144,
           lineWidth: 1
         },
         {
           type: 'line',
-          x1: 390, y1: 128,
-          x2: 565, y2: 128,
+          x1: 390, y1: 144,
+          x2: 565, y2: 144,
           lineWidth: 1
         },
         {
           type: 'line',
-          x1: 115, y1: 146,
-          x2: 565, y2: 146,
+          x1: 115, y1: 162,
+          x2: 565, y2: 162,
           lineWidth: 1
         },
         {
           type: 'line',
-          x1: 115, y1: 164,
-          x2: 290, y2: 164,
+          x1: 115, y1: 180,
+          x2: 290, y2: 180,
           lineWidth: 1
         },
         {
           type: 'line',
-          x1: 390, y1: 164,
-          x2: 565, y2: 164,
+          x1: 390, y1: 180,
+          x2: 565, y2: 180,
           lineWidth: 1
         },
       ]
@@ -715,44 +745,44 @@ const docDefinition = {
       canvas: [
         {
           type: 'line', // Students name
-          x1: 115, y1: 223,
-          x2: 290, y2: 223,
+          x1: 115, y1: 239,
+          x2: 290, y2: 239,
           lineWidth: 1
         },
         {
           type: 'line', // DOB
-          x1: 365, y1: 223,
-          x2: 425, y2: 223,
+          x1: 365, y1: 239,
+          x2: 425, y2: 239,
           lineWidth: 1
         },
         {
           type: 'line', // NYC ID
-          x1: 480, y1: 223,
-          x2: 565, y2: 223,
+          x1: 480, y1: 239,
+          x2: 565, y2: 239,
           lineWidth: 1
         },
         {
           type: 'line', // Service District
-          x1: 115, y1: 241,
-          x2: 185, y2: 241,
+          x1: 115, y1: 257,
+          x2: 185, y2: 257,
           lineWidth: 1
         },
         {
           type: 'line', // Frequency
-          x1: 250, y1: 241,
-          x2: 290, y2: 241,
+          x1: 250, y1: 257,
+          x2: 290, y2: 257,
           lineWidth: 1
         },
         {
           type: 'line', // Duration
-          x1: 350, y1: 241,
-          x2: 400, y2: 241,
+          x1: 350, y1: 257,
+          x2: 400, y2: 257,
           lineWidth: 1
         },
         {
           type: 'line', // Hourly Rate
-          x1: 470, y1: 241,
-          x2: 565, y2: 241,
+          x1: 470, y1: 257,
+          x2: 565, y2: 257,
           lineWidth: 1
         },
       ]
@@ -763,32 +793,32 @@ const docDefinition = {
       canvas: [
         {
           type: 'line', // Students name
-          x1: 105, y1: 300,
-          x2: 290, y2: 300,
+          x1: 105, y1: 316,
+          x2: 290, y2: 316,
           lineWidth: 1
         },
         {
           type: 'line', // Students name
-          x1: 385, y1: 300,
-          x2: 565, y2: 300,
+          x1: 385, y1: 316,
+          x2: 565, y2: 316,
           lineWidth: 1
         },
         {
           type: 'line',
-          x1: 105, y1: 318,
-          x2: 565, y2: 318,
+          x1: 105, y1: 334,
+          x2: 565, y2: 334,
           lineWidth: 1
         },
         {
           type: 'line', // Students name
-          x1: 105, y1: 336,
-          x2: 290, y2: 336,
+          x1: 105, y1: 352,
+          x2: 290, y2: 352,
           lineWidth: 1
         },
         {
           type: 'line', // Students name
-          x1: 385, y1: 336,
-          x2: 565, y2: 336,
+          x1: 385, y1: 352,
+          x2: 565, y2: 352,
           lineWidth: 1
         },
       ]
@@ -799,20 +829,20 @@ const docDefinition = {
       canvas: [
         {
           type: 'line', // Students name
-          x1: 125, y1: 471,
-          x2: 200, y2: 471,
+          x1: 125, y1: 487,
+          x2: 200, y2: 487,
           lineWidth: 1
         },
         {
           type: 'line', // Students name
-          x1: 290, y1: 471,
-          x2: 380, y2: 471,
+          x1: 290, y1: 487,
+          x2: 380, y2: 487,
           lineWidth: 1
         },
         {
           type: 'line',
-          x1: 490, y1: 471,
-          x2: 565, y2: 471,
+          x1: 490, y1: 487,
+          x2: 565, y2: 487,
           lineWidth: 1
         },
       ]
@@ -823,7 +853,6 @@ const docDefinition = {
   // IMAGES ROUTES
   images: { 
     depart_logo: 'static/images/depart_logo.png',
-    underline: 'static/images/underline.png',
   },
   // PDF REUSABLE STYLES
   styles: {

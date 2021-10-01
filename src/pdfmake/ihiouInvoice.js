@@ -29,7 +29,7 @@ const certificationText = {
 const pdfMaker = new PdfMakerBuilder(fonts);
 
 pdfMaker.tableLayouts = {
-  nestedTableLayout: {
+  nestedTableLayout_IHIOU: {
     fillColor: function (rowIndex, node, columnIndex) { 
       return (rowIndex === 0) ? '#b4e9f0' : 'white'
     }
@@ -404,7 +404,7 @@ const docDefinition = {
               ['6', '', '', ''], ['7', '', '', ''], ['8', '', '', ''], ['9', '', '', ''], ['10', '', '', ''], 
             ]
           },
-          layout: pdfMaker.tableLayouts.nestedTableLayout
+          layout: pdfMaker.tableLayouts.nestedTableLayout_IHIOU
         },
         {
           width: '33%',
@@ -417,7 +417,7 @@ const docDefinition = {
               [' ', '', '', ''], [' ', '', '', ''], [' ', '', '', ''], [' ', '', '', ''], [' ', '', '', ''], 
             ]
           },
-          layout: pdfMaker.tableLayouts.nestedTableLayout
+          layout: pdfMaker.tableLayouts.nestedTableLayout_IHIOU
         },
         {
           width: '33%',
@@ -430,7 +430,7 @@ const docDefinition = {
               [' ', '', '', ''], [' ', '', '', ''], [' ', '', '', ''], [' ', '', '', ''], [' ', '', '', ''], 
             ]
           },
-          layout: pdfMaker.tableLayouts.nestedTableLayout
+          layout: pdfMaker.tableLayouts.nestedTableLayout_IHIOU
         }
       ],
     },
@@ -910,7 +910,6 @@ const docDefinition = {
 
   images: { 
     depart_logo: 'static/images/depart_logo.png',
-    underline: 'static/images/underline.png',
   },
   // PDF REUSABLE STYLES
   styles: {
